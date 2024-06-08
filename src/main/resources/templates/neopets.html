@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Lista de Neopets</h1>
+<hr>
+<table>
+    <thead>
+    <tr>
+        <th>Dia da Espécie</th>
+        <th>Nome</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="neopet:${neopets}">
+        <td th:text="${neopet.speciesday}">Dia da Espécie</td>
+        <td th:text="${neopet.nome}">Nome</td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
